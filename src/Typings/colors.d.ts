@@ -14,6 +14,9 @@ type OpaqueColor = Omit<Coordinates, 'a'>
 type ColorProps = keyof Color
 type ManuallyDefinedColorProps = 'r' | 'g' | 'b' | 'a'
 
+type ColorMap = Record<string, Color>
+type SpecificColorMap = Record<'myRed' | 'myBlue' | 'myYellow', Color>
+
 type BigIntColor = {
   [k in keyof Color]: BigInt
 }
